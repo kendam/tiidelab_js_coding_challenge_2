@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FizzBuzz</title>
+    <style>
+      body {
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        margin: 20px;
+        padding: 30px;
+        /* justify-content: center; */
+      }
+      strong,
+      li {
+        color: chocolate;
+      }
+      li,
+      h3 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      This is a challenge that prints out
+      <strong>Fizz</strong>
+      for numbers divisible by 3,
+      <strong>Buzz</strong>
+      for numbers divisible by 5 and
+      <strong>FizzBuzz</strong>
+      for numbers divisible by both 3 and 5.!
+    </h1>
+    <h3>To view result kindly do the following</h3>
+    <li>
+      <ul>
+        Right Click on the page
+      </ul>
+      <ul>
+        Click the inspect option (A sidebar or taskbar will pop up on any side
+        of your browser depending on the default position)
+      </ul>
+      <ul>
+        The popped up box has a navbar of it own, Listed Elements, Console,
+        Sources, Network, etc..
+      </ul>
+      <ul>
+        Click on the Console option to view result. Note: Result displayed is in
+        range you input.
+      </ul>
+    </li>
+    <script>
+      // Get user input
+      var range = prompt(`Input your range of number to check`);
+
+      // Convert user input into number
+      range = Number(range);
+
+      // Check if input is a valid number.
+      while (Number.isNaN(range)) {
+        range = prompt("Number not valid \nEnter valid Number");
+      }
+
+      // To loop through the number range inputted
+      for (var i = 1; i <= range; i++) {
+        // To check if a number is divisible by both 3 and 5 (15).
+        if (i % 15 == 0) {
+          // To print FizzBuzz if true
+          console.log("FizzBuzz");
+
+          // To check if a number is divisible by 3.
+        } else if (i % 3 == 0) {
+          // To print Fizz if true.
+          console.log("Fizz");
+
+          // To check if a number is divisible by 5.
+        } else if (i % 5 == 0) {
+          // To print Buzz if true
+          console.log("Buzz");
+
+          // To print the number if it does not meet any of the conditions above.
+        } else console.log(i);
+      }
+    </script>
+  </body>
+</html>
