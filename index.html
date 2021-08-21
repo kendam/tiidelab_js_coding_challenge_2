@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIZZ BUZZ FOR LOOP AND CHESS GAME</title>
+</head>
+<body style="background-image:url(background.jpg); background-size: cover; background-repeat: no-repeat;">
+    
+<h1 style="text-align: center; color: rgb(26, 212, 10);">FIZZ BUZZ FOR LOOP AND CHESS GAME </h1>
+<p id="display"></p>
+    
+<script>
+
+
+
+// First task on fizz buss
+
+ var numberThree = "Fizz";
+  var numberFive = "Buzz";
+
+  for (let index = 1; index <= 100; index++) {
+      switch (true) {
+          case index % 3 ==0 && index % 5 == 0 :
+              console.log(`${numberThree}${numberFive}`);
+              break;
+
+          case index % 3 ==0 :
+              console.log(`${numberThree}`);
+              break;
+
+          case index % 5 == 0 :
+              console.log(`${numberFive}`);
+              break;
+      
+          default: 
+          console.log(index);
+              break;
+      }
+      
+  }
+
+//   End Of First task 
+
+// second chess task 
+
+
+let boardSize = 8;
+
+let chessBoard = "";
+
+for (let y = 0; y < boardSize; y++) {
+
+  for (let x = 0; x < boardSize; x++) {
+
+    if ((x + y) % 2 == 0) {
+        chessBoard += " ";
+    } else {
+        chessBoard += "#";
+    }
+  }
+  chessBoard += "\n";
+}
+
+console.log(chessBoard);
+
+
+
+
+</script>
+
+
+</body>
+</html>
