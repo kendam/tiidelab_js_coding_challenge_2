@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    for(i = 0; i <= 100 ; i++){
+      if (i % 3 == 0 && i % 5 == 0) {
+        console.log('fizzbuzz');
+      }
+      else if( i % 3 == 0 ){
+        console.log('fizz');
+      }
+       else if( i % 5 == 0){
+        console.log ('buzz');
+      }
+      else{ console.log( i)}
+    }
+
+    console.log('***************************')
+
+    var n = 8;
+    var count = ''
+
+
+    for (let i =1; i <= n; i++) {
+
+     for( w = 1; w <= n ; w++){
+       if( (i + w) % 2 == 0 ){
+        count+= '#'
+       } else{
+         count+= ' '
+       }
+     }
+     count += '\n'
+
+    }
+    console.log(count)
+  </script>
+</body>
+</html>
