@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge</title>
+</head>
+<body>
+    <script>
+
+console.log ("###################FizzBuzz##########################")
+function categoriseNumbers(start, stop) {
+    var divisibleBy3 = "Fizz";
+    var divisibleBy5 = "Buzz";
+    for (let number = start; number <= stop; number++){
+        if (number % 3 == 0 && number % 5 == 0) {
+            console.log(`${divisibleBy3}${divisibleBy5}`)
+        }
+        else if (number % 3 == 0) {
+            console.log(`${divisibleBy3}`)
+        }
+        else if (number % 5 == 0) {
+            console.log(`${divisibleBy5}`)
+        }
+        else {
+            console.log(number)
+        }
+    }  
+}
+categoriseNumbers(1,100)
+
+
+
+console.log ("###################Chessboard##########################")
+
+function chessboard(size){
+    var output = ""
+    for (let i = 1; i <= size; i++) {
+        for (let j = 1; j <= size; j++) {
+            if ((i + j) % 2 == 0) {
+                output += " "
+            } else {
+                output += "#"
+            }
+        }
+        output += "\n"
+    }
+    console.log(output);
+}
+chessboard(8)
+
+
+    </script>
+</body>
+</html>
