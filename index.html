@@ -9,7 +9,7 @@
   <body>
     <script>
       // loop through 1 to 100
-      for (i = 1; i <= 100; i++) {
+      for (i = 1; i <= 100; i++) {  
         // divisible by 3
         if (i % 3 == 0 && i % 5 != 0) {
           console.log("Fizz");
@@ -31,7 +31,14 @@
       var count = 0; //row count
 
       for (i = 1; i <= total; i++) {
-        if (count % 2 == 0) {
+        if (n % 2 == 1){
+           //odd Grid sizes
+          if (i % 2 == 0) {
+            var x = "#";
+          } else if (i % 2 == 1) {
+            var x = " ";
+          }
+        } else if (count % 2 == 0) {
           //even number rows
           if (i % 2 == 0) {
             var x = " ";
