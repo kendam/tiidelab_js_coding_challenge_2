@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// No.1
+        for (let n = 1; n <= 100; n++)
+            if (n % 3 == 0 && n % 5 == 0) {
+                console.log("FizzBuzz")
+            } else if (n % 3 == 0) {
+                console.log("Fizz")
+            } else if (n % 5 == 0) {
+                console.log("Buzz")
+            }
+            else {
+                console.log(n)
+            }
+
+//   NO. 2
+       var board = ""
+       var size = 8
+       
+       for(a = 0; a < size; a++){
+       
+           for(b = 0; b < size; b++){
+               if((a+b) % 2 == 0){ 
+                   board += " "
+               }else{
+                   board += "#"
+               }
+           }
+           board += "\n" 
+       }
+       console.log(board)
+    </script>
+</body>
+</html>
