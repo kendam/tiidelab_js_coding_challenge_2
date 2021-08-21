@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    // ########-----    THE FIZZBUZZ CHALLENGE    -----#######
+    function fizzbuzz() {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log("FizzBuzz");
+                } else if (i % 3 === 0) {
+                    console.log("Fizz");
+                } else if (i % 5 === 0) {
+                    console.log("Buzz");
+                } else {
+                    console.log(i);
+                }
+            }
+        }
+        fizzbuzz()
+
+         // ########-----    THE  CHALLENGE    -----#######
+
+         let size = 8;
+
+            let chessBoard = "";
+
+            for (let y = 0; y < size; y++) {
+                for (let x = 0; x < size; x++) {
+                    if ((x + y) % 2 == 0) {
+                       chessBoard += " ";
+                    } else {
+                        chessBoard += "#";
+                    }
+                }
+                chessBoard += "\n";
+            }
+
+            console.log(chessBoard);
+</script>
+</html>
