@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Challenge</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: blanchedalmond;
+        }
+
+        h1{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>FizzBuzz Challenge</h1>
+
+
+
+    <script>
+          
+          function fizzBuzz(){
+            for(var j = 1; j <= 100; j++){
+                             
+                             switch(true){
+                              case j % 3 == 0  && j % 5 != 0 :
+                                console.log("Fizz");
+                                break;
+                                case j %  5 == 0 && j % 3 != 0:
+                                  console.log("Buzz");
+                                  break;
+                                  case j % 3 == 0 && j % 5 == 0 :
+                                    console.log("FizzBuzz");
+                                    break;
+                                    default:
+                                      console.log(j);
+                                      break;
+                             }
+
+                       }
+
+          }
+
+
+           fizzBuzz();
+
+    </script>
+</body>
+</html>
