@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function creatgrid(width){
+        //     let emptys = "";
+        //     for(let i = 0; i < width.length; i++){
+        //         console.log(width[i])
+        //         // empty +=i;
+        //         // if(eight.length == 8){
+                    
+        //         // }
+        //     }
+        // }
+
+        // creatgrid(8)
+
+        // let performMultiplication1 = function(number, start, end){
+        //     let y = start;
+        //     while(y <= 12){
+        //         r = y * number;
+        //         console.log(`${number} x ${y} = ${r}`)
+        //         y++
+        //     }
+        // };
+        // performMultiplication1(1, 4, 10)
+
+       
+        
+    width = 8; 
+    eightByEight = ""
+    for (let i = 1; i <= 8; i++) {
+      for (let j = 1; j <= 8; j++) {
+        if (i % 2 === 0) {
+        	eightByEight+= "# "
+        }
+         else {
+
+        	eightByEight+= " #"
+        }
+      }
+      eightByEight+= "\n"
+      
+    }
+    console.log(eightByEight)
+
+    // console.log("Demacation")
+
+    // len = 64;
+    // eightByEight = "";
+    // let result = len / 4;
+    // console.log(result)
+    // eightByEight+="#"
+
+
+
+
+    // for(let x = 0; x <= len; x++){
+    //     if(len % 2 === 0){
+    //         eightByEight+="# "
+    //         if(eightByEight.length >= 8){
+    //             eightByEight+= "\n"
+    //         }
+    //     }
+        
+    // }
+    // console.log(eightByEight)
+
+    </script>
+    
+</body>
+</html>
