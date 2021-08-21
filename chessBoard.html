@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+</head>
+<body>
+    <script>
+        let chess = (board, even, odd) =>
+        { //creating a function called "chess" with three parameters using Arrow function
+            for( var i = 0; i < 8; i++){ //iniating a for loop for the size of the board, setting the maximum as 8
+            if( i%2 == 0){
+                board += even + '\n' //if row is divisble by 2, it should print " # # # #" jump to new line
+            }else{
+                board += odd + '\n' // otherwise it should print "# # # # " then jump to new line
+            }
+        }
+            console.log(board) 
+        }
+
+        chess("", " # # # #", "# # # # ") //passing arguments for the three parameters
+
+    </script>
+</body>
+</html>

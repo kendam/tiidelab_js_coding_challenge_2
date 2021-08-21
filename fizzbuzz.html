@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <script>
+        //printing all the numbers from 1 to 100, with the exceptions of numbers divisible by 3, by 5 and by both 3 and 5 using do while loop
+        var n = 0 
+            do{
+                n++
+                if (n % 3 == 0 && n % 5 == 0) 
+                {
+                    console.log("FizzBuzz") //if numbers are divisble by both 3 and 5
+                } else if (n % 3 == 0) {
+                    console.log("Fizz")//if numbers are divisble by both 3
+                } else if (n % 5 == 0) {
+                    console.log("Buzz")//if numbers are divisble by both 5
+                }else {
+                    console.log(n) //Otherwise print the remaining numbers from 1 to 100
+                }
+
+            }while(n < 100) //while number is still less than 100, perform the conditions above and stop when number is greater than 100
+    </script>
+</body>
+</html>
