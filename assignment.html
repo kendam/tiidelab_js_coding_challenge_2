@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let counter = 1;
+        let x = 0;
+        while(x <= 100){
+            x++
+            if(x % 3 === 0 ){
+            counter++
+            console.log(` Fizz ${counter}`);
+                    
+                
+                // if(x % 3 === 0 && x % 5 === 0){
+                //     console.log(`FizzBuzz ${counter}`)
+                //     counter++       
+
+            } else if(x % 5 === 0){
+                counter++
+                console.log(`Buzz ${x} ${counter}`)
+            } else if(counter % 3 === 0 && counter % 5 === 0){
+                counter++
+                console.log(`FizzBuzz ${counter}`)
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
