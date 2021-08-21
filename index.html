@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge</title>
+</head>
+<body>
+    
+    <script>
+        /*-------- Question 1 - FIZZBUZZ ----------*/
+
+        for(let i = 1; i <= 100; i++) {
+            
+            //numbers divisible by both 3 and 5
+            if(i % 3 == 0 && i % 5 == 0) {
+                console.log("FizzBuzz");
+            }
+            //numbers divisible by 3
+            else if(i % 3 == 0) {
+                console.log("Fizz");
+            }
+            //numbers divisible by 5
+            else if(i % 5 == 0) {
+                console.log("Buzz");
+            }
+            //numbers not divisible by 3, 5 or both
+            else{
+                console.log(i)
+            }
+        }
+
+        /*---------- End of Question 1 -----------*/
+
+
+
+        /*---------- Question 2 - CHESSBOARD -----------*/
+
+        var hash = "#";
+        var space = " ";
+        var newLine = "\n";
+        var output = ""; 
+        
+        //declares vaariable to take the size of the chessboard
+        var size = Number(prompt("Enter the size"));
+            
+        //set a loop for the rows
+        for(var i = 1; i <= size; i++) { 
+                
+            //set a loop for the columns
+            for(var j = 1; j <= size; j++) {
+                //check if the sum of the row & column is even
+                if((i + j) % 2 == 0) {
+                    //if it is even, add space
+                    output += space;
+                }
+                else{
+                    //if it is not, add hash
+                    output += hash;
+                }
+            }
+            //add a newLine after each row
+            output += newLine;
+                
+        }
+        console.log(output);
+        
+        /*----------- End of Question 2 -------------*/
+        
+    </script>
+</body>
+</html>
