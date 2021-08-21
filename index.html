@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge 2</title>
+
+    <style>
+        .main {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            min-height: 100vh;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        JavaScript Coding Challenge 2
+    </div>
+
+    <script>
+        // this is the first task for the fizzBuzz Challenge
+        const fizzBuzz = () => {
+            for (let i = 0; i <= 100; i++) {
+                let res = '';
+                if (i % 3 === 0) {
+                    res += 'Fizz'
+                }
+                if (i % 5 === 0) {
+                    res += 'Buzz'
+                }
+                console.log(res || i);
+            }
+        }
+        fizzBuzz()
+
+        // this is the second task for the 8*8 grid challenge
+        const chessBoard = () => {
+            let size = 8;
+            let board = ''
+            for (let i = 0; i <= size; i++) {
+                for (let j = 0; j <= size; j++) {
+                    if ((j + i) % 2 == 0) {
+                        board += ' '
+                    } else {
+                        board += '#'
+                    }
+                }
+                board += '\n'
+            }
+            console.log(board)
+        }
+        chessBoard()
+    </script>
+</body>
+</html>
