@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coding challenge</title>
+  </head>
+  <body>
+    <script>
+      // loop through 1 to 100
+      for (i = 1; i <= 100; i++) {  
+        // divisible by 3
+        if (i % 3 == 0 && i % 5 != 0) {
+          console.log("Fizz");
+        } else if (i % 3 != 0 && i % 5 == 0) {
+          // divisible by 5
+          console.log("Buzz");
+        } else if (i % 3 == 0 && i % 5 == 0) {
+          // divisible by both 3 and 5
+          console.log("FizzBuzz");
+        } else {
+          // not divisible by 3 and 5, print number
+          console.log(i);
+        }
+      }
+
+      var grid = ""; //grid container
+      var n = prompt("Input your Grid Size"); //grid height and width
+      var total = n * n; //total number of string in the grid
+      var count = 0; //row count
+
+      for (i = 1; i <= total; i++) {
+        if (n % 2 == 1){
+           //odd Grid sizes
+          if (i % 2 == 0) {
+            var x = "#";
+          } else if (i % 2 == 1) {
+            var x = " ";
+          }
+        } else if (count % 2 == 0) {
+          //even number rows
+          if (i % 2 == 0) {
+            var x = " ";
+          } else if (i % 2 == 1) {
+            var x = "#";
+          }
+        } else if (count % 2 == 1) {
+          //odd number rows
+          if (i % 2 == 0) {
+            var x = "#";
+          } else if (i % 2 == 1) {
+            var x = " ";
+          }
+        }
+
+        if (i % n == 0) {
+          //breaks to new row
+          x += "\n"; //append a break line string
+          count++; // increase row count
+        }
+
+        grid += x; //append grid string to grid container
+      }
+      //TIME COMPLEXITY 0(N)
+      console.log(grid);
+    </script>
+  </body>
+</html>
