@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: blueviolet;
+            align-items: center;
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            line-height: 4.5rem;
+        }
+
+        .container h2 {
+            color: white;
+
+        }
+
+        .container p span {
+            color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class = "container">Coding Challenge
+        <h2>FizzBuzz and Chessboard Assignment Solutions.</h2>
+        <p>This is a coding challenge of solving the Fizzbuzz and Chessboard question</p>
+        <p><span>Note:</span> Open console window or "press Ctrl + Shift + I" to display console window to see solution to the assignment.</p>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        // FizzBuzz Assignment Solution
+
+        
+       for (let i = 1; i <=100; i++) {
+            if (i % 3 == 0)
+            console.log("Fizz");
+            else if (i % 5 == 0)
+            console.log("Buzz");
+            else if (i % 15 == 0)
+            console.log("FizzBuzz");
+            else {
+            console.log(i);
+            }
+        }
+              
+        // Chessboard Assignment Solution
+        let size = 8;
+        let board = " ";
+
+        for (let y = 0; y < size; y++){
+            for (let x = 0; x < size; x++){
+                if ((x + y) % 2 == 0){
+                    board += " ";
+                }
+                else {board += "#";}
+            }
+            board += "\n";
+        }
+        console.log(board);
+
+    </script>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
