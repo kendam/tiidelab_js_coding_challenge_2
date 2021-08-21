@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessBoard Assignment</title>
+</head>
+<body>
+    
+
+    <script>
+    var chessBoard = "";
+        var size = 8;
+	var line;
+	var whiteBox;
+	var blackBox;
+
+        for (line = 1; line <= size; line++) { 
+
+        if (line % 2 === 0) {
+
+//if lineCounter is an even number
+        for (box = 1; box <= size; box++) {
+            whiteBox = (box % 2 === 0);
+            switch (whiteBox) {
+                case true:
+                    (chessBoard += "##");
+                    break;
+                case false:
+                    (chessBoard += "  ");
+                    break;
+                }
+            }                   
+        }
+    else { //if lineCounter is an odd number
+        for (box = 1; box <= size; box++) {
+            blackBox = (box % 2 === 1);
+            switch (blackBox) {
+                case true:
+                    (chessBoard += "##");
+                    break;
+                case false:
+                    (chessBoard += "  ");
+                    break;
+            }
+            }                       
+        }   
+    chessBoard += "\n";
+    }
+    console.log(chessBoard);
+    </script>
+</body>
+</html>
