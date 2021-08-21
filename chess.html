@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // var chess = "";
+        // var number = prompt(`Enter a number`);
+        // var total = number * number;
+        // var row = 1;
+        // var column = 1;
+
+        // for (i = 1; i <= total; i++) {
+        //     var x;
+        //     if ((row + column) % 2 == 0) {
+        //         x = " # ";
+
+        //     } else x = "   ";
+        //     column++;
+        //     if (i % number == 0) {
+        //         x += "\n";
+        //         row++;
+        //         column = 1;
+        //     }
+        //     chess += x;
+        // }
+        // console.log(chess);
+
+
+        var size = 8;
+        var block = "#";
+        var space = " ";
+
+        function chessBoard(chessSize){
+            for ( var i = 0; i < chessSize; i++){
+                var drawLine = " ";
+                for (var y = 0; y < chessSize; y++){
+                    if (i % 2 ){
+                        if (y % 2) {
+                        drawLine = drawLine + space;
+                    } else {
+                        drawLine = drawLine + block;
+                    } 
+                }else {
+                        if (y % 2){
+                            drawLine = drawLine + block;
+
+                        } else {
+                            drawLine = drawLine + space;
+                        }
+                    }
+
+                }
+
+                console.log(drawLine);
+            }
+        }
+        chessBoard(size);
+    </script>
+</body>
+
+</html>
