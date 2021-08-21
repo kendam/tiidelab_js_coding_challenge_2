@@ -1,28 +1,32 @@
 const fizzbuzz = () => {
-  console.log('fb')
-  for (let i = 1; i <= 100; i++) {
-    if (i % 15 === 0) console.log('FizzBuzz')
-    if (i % 5 === 0) console.log('Buzz')
-    if (i % 3 === 0) console.log('Fizz')
+  for (let index = 1; index <= 100; index++) {
+    switch(true){
+      case (index % 3 === 0):
+        console.log('Fizz')
+        break
+      case (index % 5 === 0):
+        console.log('Buzz')
+        break
+      case (index % 3 === 0 && index % 5 === 0):
+        console.log('FizzBuzz')
+        break
+      default:
+        console.log(index)
+    }
   }
 }
 
 const chessboard = (width = 8) => {
   let board = ''
   let value = false
-  for (let i = 1; i < Math.pow(width, 2)+1; i++) {
-    let t
-    if (width % 2 === 0) {
-      t = i + value
-    } else {
-      t = i
-    }
-    if (t % 2 === 0) {
+  for (let index = 1; index < Math.pow(width, 2)+1; index++) {
+    let even = width % 2 === 0
+    if ((even ? index + value : index) % 2 === 0) {
      board = board.concat('* ')
     } else {
       board = board.concat('# ')
     }
-    if (i !== 0 && i % width === 0) {
+    if (index !== 0 && index % width === 0) {
       board = board.concat('\n')
       value = !value
     }
