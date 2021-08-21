@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function chessboard(size) {
+            var result = ""
+            for (let row =1; row <= size; row++) {
+                for (let col=1; col <= size;col++ ) {
+                   if ((row + col) % 2 == 0 ){
+                       result += " "
+                   }
+                   else{
+                       result += "#"
+                   }
+                    
+                }
+               result += "\n" 
+            }
+            console.log(result);
+        }
+        chessboard(8)
+
+        var divisibleBy3 = "fizz";
+        var divisibleBy5 = "Buzz";
+
+        for (let number = 1; number <= 100; number++){
+            switch(true){
+                case number % 3 == 0 && number % 5 == 0: 
+                console.log(` ${divisibleBy3}${divisibleBy5}`)
+                break;
+                case number % 3 == 0:
+                    console.log(`${divisibleBy3}`)
+                    break;
+                    case number % 5 == 0:
+                    console.log(`${divisibleBy5}`)
+                    break; 
+                    default:
+                        console.log(number)
+                        break;
+            }
+        }
+    </script>
+</body>
+</html>
