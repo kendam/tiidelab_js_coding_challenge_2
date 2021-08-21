@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chessboard Challenge</title>
+    <style>
+      body {
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        margin: 20px;
+        padding: 30px;
+      }
+      strong,
+      li {
+        color: chocolate;
+      }
+      li,
+      h3 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      This is a Challenge to display a grid in a Chessboard-like pattern. Using
+      <strong>#</strong>
+    </h1>
+    <h3>To view result kindly do the following</h3>
+    <li>
+      <ul>
+        Right Click on the page
+      </ul>
+      <ul>
+        Click the inspect option (A sidebar or taskbar will pop up on any side
+        of your browser depending on the default position)
+      </ul>
+      <ul>
+        The popped up box has a navbar of it own, Listed Elements, Console,
+        Sources, Network, etc..
+      </ul>
+      <ul>
+        Click on the Console option to view result. Note: Result displayed is in
+        size you input.
+      </ul>
+    </li>
+
+    <script>
+      // Take the users desired height size
+      var height = prompt(`Input your range in number to display(height)`);
+
+      // Convert user input into number
+      height = Number(height);
+
+      // Check if input is a valid number.
+      while (Number.isNaN(height)) {
+        height = prompt("Number not valid \nEnter valid Number");
+      }
+
+      // Take the users desired breath size
+      var breath = prompt(`Input your range in number to display(breath)`);
+
+      // Convert user input into number
+      breath = Number(breath);
+
+      // Check if input is a valid number.
+      while (Number.isNaN(breath)) {
+        breath = prompt("Number not valid \nEnter valid Number");
+      }
+
+      // Declared an empty string
+      board = "";
+
+      // A loop to set rows (height)
+      for (var i = 1; i <= height; i++) {
+        // A loop to set the numbers of character/colum(breath)
+        for (var j = 1; j <= breath; j++) {
+          // To check if the height is divisible by 2.
+          if (i % 2 === 0) {
+            // To print "# " for even rows eight times.
+            board += "# ";
+            // To print " #" for odd rows eight times.
+          } else {
+            board += " #";
+          }
+        }
+        // Add a newline character to separate rows ater every 8 charater.
+        board += "\n";
+      }
+
+      console.log(board);
+    </script>
+  </body>
+</html>
