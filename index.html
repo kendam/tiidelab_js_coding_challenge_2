@@ -8,6 +8,7 @@
 </head>
 <body>
   <script>
+    //  THIS IS THE FIZZBUZZ CHALLENGE
 
     for(i = 0; i <= 100 ; i++){
       if (i % 3 == 0 && i % 5 == 0) {
@@ -22,21 +23,28 @@
       else{ console.log( i)}
     }
 
-    console.log('***************************')
 
-    var n = 8;
+    //THIS IS  THE CHESS BOARD CHALLENGE
+
+    // the columns and rows
+    var n = prompt('please input number');
+
+    // 
     var count = ''
 
-
+    //for column
     for (let i =1; i <= n; i++) {
 
+      //for rows
      for( w = 1; w <= n ; w++){
-       if( (i + w) % 2 == 0 ){
+
+      if( (i + w) % 2 == 0 ){
         count+= '#'
        } else{
          count+= ' '
        }
      }
+     // to add a new line
      count += '\n'
 
     }
