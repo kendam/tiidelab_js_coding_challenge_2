@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessBord</title>
+</head>
+<body>
+    <h1>Welcome JS Class At TIIDElab</h1>
+    <p>ChessBord</p>
+    
+    <script>
+    
+       
+        var width = Number(prompt(`Enter width of the grid`))
+        var height =Number(prompt(`Enter height of the grid`))
+        if (!Number.isNaN(height && width)) {
+
+        let baseString =  ``;
+        let count = 0;
+    for(let i = 0; i < width; i++){
+        if(count === 0){
+            baseString += '#';
+            count += 1;
+        }else{
+            baseString += ` `;
+            count = 0;
+        }
+    }
+    console.log(baseString)
+    
+    // reverse base string
+    let reversedBaseStringPlaceholder1 = baseString.replaceAll(' ', 'z'); 
+    let reversedBaseStringPlaceholder2 = reversedBaseStringPlaceholder1.replaceAll('#', ' ');
+    let reversedBaseString = reversedBaseStringPlaceholder2.replaceAll('z', `#`);
+    
+
+    // forming the grid
+    let finalResult = ``;
+    let finalResultCount = 0;
+
+    for(let j = 0; j < height; j++){
+        if(finalResultCount === 0){
+            finalResult += `${baseString}\n`;
+            finalResultCount++;
+        }else{
+            finalResult += `${reversedBaseString}\n`;
+            finalResultCount = 0;
+        }
+    }
+    console.log(`This is an ${width} X ${height} Grid`);
+    console.log(finalResult);
+    }
+    else{
+        alert("You can only Enter a Number Not a Alphabet")
+    }
+    </script>
+</body>
+</html>
