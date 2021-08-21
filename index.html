@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+ // FizzBuzz
+for(let number= 1; number<= 100;number++){
+    if(number % 3 ==0 && number % 5 ==0){
+        console.log("FizzBuzz")
+    }
+    if(number % 3 ==0){
+        console.log("Fizz")
+    }
+    else if(number % 5 == 0){
+        console.log("Buzz")
+    }
+    else{
+    console.log(number)
+}
+}
+
+
+    //chessboard
+    let chessboard = function(x,y){
+    var evenStart = "#";
+    let oddStart = " ";
+    let result = "";
+    for (let i= 0 ; i < x ; i++){
+        let tempRes = ""
+        for(let n=0; n < Math.floor(y / 2) ; n++){
+            if (i % 2 == 0) {
+                tempRes += "# ";
+            } else {
+                tempRes += " #";
+            }
+        }
+        if (y % 2 != 0) tempRes += tempRes.charAt(tempRes.length - 1) === "#" ? " " : "#"
+    
+        result += tempRes + "\n"
+    }
+return result;
+}
+console.log(chessboard(8,8))
+    </script>
+</body>
+</html>
