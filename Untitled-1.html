@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chess board </title>
+</head>
+<body>
+    <script>
+        let size = 8;
+        let result = '';
+        let row = 1;
+        let column =1;
+        while(row <= size ){
+            let column = 1;
+            while(column <= size){
+                if((column + row) % 2 === 0){
+                    result += " ";
+                }else {
+                    result += " # " ;
+                }
+                column += 1;
+            }
+            result += '\n';
+            row += 1;
+        }
+        
+        console.log(result);
+    </script>
+    
+</body>
+</html>
