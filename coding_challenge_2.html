@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge 2</title>
+  </head>
+
+  <body> 
+  </body>
+
+  <script>
+
+    function chessboardGame(width=8, height){
+      height = typeof(height === 'undefined')? width: height; //If width is not given, width=height
+      chessboard = "";
+
+      if(isNaN(width) || isNaN(height)){
+        throw TypeError(`Could not convert ${width} or ${height} to number`)
+      }
+      else{
+        for(let rows=0; rows<height; rows++){ //Implicit type conversion of width, height to integer
+          cells = (rows%2 == 0)? " #": "# "; //Reverse the string for odd rows
+          for(let columns=0; columns<width; columns++){
+            chessboard += (columns)%2 == 0? cells[0]: cells[1]; 
+          }
+          chessboard += "\n"
+        }	
+      }
+
+      return chessboard
+    }
+
+
+
+    function FizzBuzz(min=1, max=100){
+
+      if(isNaN(min) || isNaN(max)){
+        throw TypeError(`Could not convert '${min}' or '${max}' to number`);
+      }
+      else {
+
+        for(let number=min; number<=max; number++){ //Implicit type conversion of max, min to integer
+          (number%3 == 0 && number%5 == 0)? console.log("FizzBuzz") :
+          (number%3 == 0)? console.log("Fizz") :
+          (number%5 == 0)? console.log("Buzz") : console.log(number);
+        }
+      }
+    }
+
+    console.log(chessboardGame(10));
+    FizzBuzz('7', 16.9);
+
+  </script>
+
+</html>
