@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> while, do-while and for loop</title>
+    </head>
+  <body>
+      <script>
+          //to display numbers from one to hundred with some exceptions
+          
+          let option1 = "Fizz"
+          let option2 = "Buzz"
+          let option3 = "FizzBuzz"
+          
+          //using for loop
+          for(let number = 1; number<=100; number++){
+              if(number % 3 == 0 && number % 5 == 0){
+                  console.log(option3)
+              }
+              else if(number % 3 == 0){
+                  console.log(option1)
+              }
+              else if(number % 5 == 0){
+                  console.log(option2)
+              }
+              else
+              console.log(number)
+          }
+         
+        
+    //making the perfect chess Board with function
+    function chessBoard(n){
+    var chess = ""
+    for(let i = 1; i <= n; i++){
+        for(let j = 1; j <= n; j++){
+            if((i + j) % 2 == 0){
+                chess += " "
+            }
+            else{
+                chess += "#"
+            }
+         
+        }
+       chess += "\n";
+    }
+    console.log(chess);
+    }
+    
+    chessBoard(12) 
+      </script>
+  </body>
