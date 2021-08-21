@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // declare size and empty board string
+    var size = 8;
+    var board = "";
+
+    // Outerloop for rows
+    for (let i = 0; i < size; i++) {
+      // Innerloop for columns
+      for (let j = 0; j < size; j++) {
+        if ((i + j) % 2 == 0) { // check if columnn is even
+          board += " ";
+        } else { // if column is odd
+          board += "#";
+        }
+      }
+      board += "\n"; // jump to next row
+    }
+    console.log(board);
+
+  </script>
+
+</body>
+</html>
