@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chessboard Challenge</title>
+  </head>
+  <body>
+    <script>
+      var board = "";
+      var number = prompt(`Enter a number`);
+      var total = number * number;
+      var row = 1; //count rows
+      var column = 1; //count column
+
+      for (i = 1; i <= total; i++) {
+        var x;
+        if ((row + column) % 2 == 0) x = " # ";
+        else x = "   ";
+        column++; //move to next column
+        if (i % number == 0) {
+          x += "\n";
+          row++; //move to next row
+          column = 1; //start counting columns from 1 again
+        }
+        board += x;
+      }
+      console.log(board);
+    </script>
+  </body>
+</html>
