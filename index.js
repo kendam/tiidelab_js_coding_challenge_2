@@ -1,26 +1,9 @@
 const fizzbuzz = () => {
   console.log('fb')
   for (let i = 1; i <= 100; i++) {
-    let remainder = i % 15
-    if (i % 15 === 0){
-      console.log('FizzBuzz')
-    } else if (i % 5 === 0){
-      console.log('Buzz')
-    } else if (i % 3 === 0) {
-      console.log('Fizz')
-    }
-    let remainder = i % 15
-    switch(remainder){
-      case (remainder % 5 === 0):
-        console.log('Fizz')
-        break
-      case (remainder % 3 === 0):
-        console.log('Buzz')
-        break
-      case 0:
-        console.log('FizzBuzz')
-        break
-    }
+    if (i % 15 === 0) console.log('FizzBuzz')
+    if (i % 5 === 0) console.log('Buzz')
+    if (i % 3 === 0) console.log('Fizz')
   }
 }
 
