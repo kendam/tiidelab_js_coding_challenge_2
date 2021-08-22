@@ -1,14 +1,16 @@
 const fizzbuzz = () => {
   for (let index = 1; index <= 100; index++) {
     switch(true){
+      case (index % 3 * 5 === 0):
+        console.log('Fizz')
+        console.log('Buzz')
+        console.log('FizzBuzz')
+        break
       case (index % 3 === 0):
         console.log('Fizz')
         break
       case (index % 5 === 0):
         console.log('Buzz')
-        break
-      case (index % 3 === 0 && index % 5 === 0):
-        console.log('FizzBuzz')
         break
       default:
         console.log(index)
