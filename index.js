@@ -1,13 +1,17 @@
+const divisibleBy = (dividend, divisor) => {
+  return dividend % divisor === 0
+}
+
 const fizzbuzz = () => {
   for (let index = 1; index <= 100; index++) {
     switch(true){
-      case (index % 3 === 0 && index % 5 === 0):
+      case divisibleBy(index, 3 * 5):
         console.log('FizzBuzz')
         break
-      case (index % 3 === 0):
+      case divisibleBy(index, 3):
         console.log('Fizz')
         break
-      case (index % 5 === 0):
+      case divisibleBy(index, 5):
         console.log('Buzz')
         break
       default:
