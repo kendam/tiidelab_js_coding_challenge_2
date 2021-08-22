@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 8 x 8 GRID CHESSBOARD
+        var chessBoard = " ";
+        var size = 8;
+        
+
+        for(let row = 0; row < size; row++){
+            for ( let colume = 0; colume < size; colume++){
+                 if ((row + colume) % 2 == 0){  // Checks for even numbers, then display them as empty spaces on the chessboard
+                    chessBoard += " ";  
+                 }
+                else {
+                    chessBoard += "#";  // Displays odd numbers as the "#" characters on the chessboard
+                }
+            }
+            chessBoard += "\n";  //Separates one line from the other
+        }
+        
+        console.log(chessBoard);
+
+    </script>
+</body>
+</html>
