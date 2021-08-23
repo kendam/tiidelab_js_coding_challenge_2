@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ruth'sjs</title>
+</head>
+<body>
+    
+</body>
+<script>
+   // program to find the LCM of two integers
+
+// let hcf;
+// // take input
+// const number1 = prompt('Enter a first positive integer: ');
+// const number2 = prompt('Enter a second positive integer: ');
+
+// // looping from 1 to number1 and number2 to find HCF
+// for (let i = 1; i <= number1 && i <= number2; i++) {
+
+//     // check if is factor of both integers
+//     if( number1 % i == 0 && number2 % i == 0) {
+//         hcf = i;
+//     }
+// }
+
+// // find LCM
+// let lcm = (number1 * number2) / hcf;
+
+// // display the hcf
+// console.log(`HCF of ${number1} and ${number2} is ${lcm}.`);
+// program to find the LCM of two integers
+
+// l.c.m
+// const num1 = prompt('Enter a first positive integer: ');
+// const num2 = prompt('Enter a second positive integer: ');
+
+// // higher number among number1 and number2 is stored in min
+// let min = (num1 > num2) ? num1 : num2;
+
+// // while loop
+// while (true) {
+//     if (min % num1 == 0 && min % num2 == 0) {
+//         console.log(`The LCM of ${num1} and ${num2} is ${min}`);
+//         break;
+//     }
+//     min++;
+// }
+ for (var i=1; i < 101; i++){
+     if (i % 15 == 0) console.log("FizzBuzz");
+     else if (i % 3 == 0) console.log("Fizz");
+     else if (i % 5 == 0) console.log("Buzz");
+     else console.log(i);
+}
+// OR
+// for(let i=0;i<100;)console.log((++i%3?'':'fizz')+(i%5?'':'buzz')||i)
+
+// let size = 8;
+
+// let board = "";
+
+// for (let y = 0; y < size; y++) {
+
+//     if ((x + y) % 2 == 0)
+//       board += " ";
+//     else
+//       board += "#";
+//   }
+//   board += "\n";
+// }
+// console.log(board);
+
+function chessboard(size) {
+  var output = "";
+  for(var i = 0; i < size; i++) {
+    for(var j = 0; j < size / 2; j++) {
+      if(i % 2 === 0) {
+        output += " ";
+        output += "#";
+      } else {
+        output += "#";
+        output += " ";      
+      }
+    }
+    output += "\n";
+  }
+  return output;
+}
+console.log(chessboard(8));
+</script>
+</html>
